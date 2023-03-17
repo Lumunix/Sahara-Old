@@ -5,11 +5,11 @@
 ## Installation
 1. Clone or download this repository and open it in your editor of choice: 
 ```bash
-git clone https://github.com/manjurulhoque/django-social-network.git
+git clone https://github.com/Lumunix/Sahara.git
 ```
 2. cd into project repository.
 ```bash
- cd django-social-network
+ cd Sahara
  ``` 
 3. To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
 
@@ -48,7 +48,7 @@ python manage.py migrate
 ```bash
 python manage.py createsuperuser
 ```
-9. To get start runserver localy by:
+9. To get start runserver locally by:
 ```bash
 python manage.py runserver
 ```
