@@ -1,0 +1,69 @@
+arrow
+bleach
+# Waiting for https://github.com/django/channels_redis/pull/347
+channels<4
+channels_redis<4
+chardet
+circus
+crispy-bootstrap4
+#CommonMark
+django-allauth
+django-braces
+django-crispy-forms
+django-dynamic-preferences
+django-enumfields
+django-environ
+django-extensions
+django-floppyforms
+django-fsm
+django-haystack
+django-js-reverse
+django-markdownx
+django-memoize
+django-model-utils
+django-redis
+django-redisboard
+django-reversion
+django-robots
+django-rq
+django-secure
+django-settings-export
+django-silk
+django-versatileimagefield
+django<4
+djangorestframework
+drf-yasg
+federation
+ipython
+lxml
+Pillow
+psycopg2-binary
+pyopenssl
+python-opengraph-jaywink
+python-slugify
+pytz
+raven
+redis
+rq
+rq-scheduler
+uwsgi
+whitenoise
+whoosh
+pyyaml
+
+# Own markdownx fork for some tweaks:
+# - disable tab when ctrl down (https://github.com/neutronX/django-markdownx/pull/85)
+# - GIF upload (upstream rejected)
+#-e git+https://github.com/jaywink/django-markdownx.git@ae0d882891972a79334fde0af2a06b66714b101a#egg=django-markdownx==2.0.28.1
+
+# Just here to easily use a dev version
+#-e git+https://gitlab.com/jaywink/federation.git@38fd38101ff8026edf856aec85377f9c1b9d9e02#egg=federation==0.24.0-dev
+
+-e git+https://github.com/jaywink/pyembed.git@f79ce0b8acd6d0dbe93809ed4c92c764792d5627#egg=pyembed==1.4.0-dev.2
+
+# Fork to allow ignoring HTML blocks, needs upstream PR
+-e git+https://github.com/jaywink/commonmark.py.git@b853dc194cb337063da898e57a9e2e6b9d3f733d#egg=commonmark==0.9.1-dev.1
+
+## NON-DIRECT requirements locked here due to issues
+#https://github.com/ipython/ipython/issues/12740
+jedi==0.17.2

@@ -1,218 +1,101 @@
-# Mostly created by https://www.gitignore.io
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
 
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
 
-### App #######################################################################
+# workspace files are user-specific
+*.sublime-workspace
 
-public/*
-!public/.keep
-public_collected/*
-!public_collected/.keep
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
 
-.env*
-!.env.example
-docker-compose.override.yml
+# sftp configuration file
+sftp-config.json
 
-
-### Python ####################################################################
-
-# Byte-compiled / optimized / DLL files
-__pycache__/
+# Basics
 *.py[cod]
-*$py.class
+__pycache__
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-downloads/
-eggs/
-.eggs/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Installer logs
+# Logs
+*.log
 pip-log.txt
-pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
 .coverage
-.coverage.*
-.cache
+.tox
 nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
+htmlcov
 .pytest_cache/
-pytestdebug.log
 
 # Translations
 *.mo
 *.pot
 
-# Flask stuff
-instance/
-.webassets-cache
+# Pycharm
+.idea
 
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
+# Vim
 
-# Sphinx documentation
-docs/_build/
-doc/_build/
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# profiling data
-.prof
-
-
-### Node ######################################################################
-
-# Dependency directories
-assets/node_modules/
-
-# Optional eslint cache
-.eslintcache
-
-
-### OSX #######################################################################
-
-# General
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-
-### Vim #######################################################################
-
-# Swap
-[._]*.s[a-v][a-z]
-!*.svg  # comment out if you don't need vector files
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
-
-# Session
-Session.vim
-Sessionx.vim
-
-# Temporary
-.netrwhist
-# Auto-generated tag files
-tags
-# Persistent undo
-[._]*.un~
-
-
-### VSCode ####################################################################
-
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-
-### Emacs #####################################################################
-
-# -*- mode: gitignore; -*-
 *~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
-auto-save-list
-tramp
-.\#*
+*.swp
+*.swo
 
-# Org-mode
-.org-id-locations
-*_archive
+# npm
+**/node_modules/
 
-# flymake-mode
-*_flymake.*
+# Compass
+.sass-cache
 
-# eshell files
-/eshell/history
-/eshell/lastdir
+# virtual environments
+/.env
 
-# elpa packages
-/elpa/
+# User-uploaded media
+socialhome/media/
 
-# reftex files
-*.rel
+# Hitch directory
+tests/.hitch
 
-# AUCTeX auto folder
-/auto/
+# MailHog binary
+mailhog
 
-# cask packages
-.cask/
-dist/
+# Pytest
+.cache
+prof/
 
-# Flycheck
-flycheck_*.el
+# Socialhome environment file
+env.local
 
-# server auth directory
-/server/
+# Collected statics
+socialhome/static/css/*.css
+socialhome/static/css/*.css.map
+socialhome/static/dist
+socialhome/static/fonts/
+!/socialhome/static/fonts/.gitkeep
+staticfiles/
 
-# projectiles files
-.projectile
+# Bower
+bower_components/
 
-# directory configuration
-.dir-locals.el
+# Mocha test statics
+socialhome/static/mocha/
 
-# network security
-/network-security.data
+# Test coverage
+.nyc_output/
+
+# DOcs
+/docs/_build/
+/yarn.lock
+/staticfiles/
+
+# Docker
+/docker-compose.yml
+
+/http_cache.sqlite
+/.env.livedev

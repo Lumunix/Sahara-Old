@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load json_context %}
+{% load js_reverse %}
+{% load static %}
+
+{% block containertype %}container-fluid{% endblock %}
+
+{% block title %}
+    {{ meta.title|addslashes }} - {{ request.site.name|addslashes }}
+{% endblock %}
+
+{% block description %}{{ meta.description|addslashes }}{% endblock %}
+
+{% block pagetags %}
+    <meta property="og:title" content="{{ meta.title|addslashes }} - {{ request.site.name|addslashes }}" />
+    <meta property="og:type" content="{{ meta.type }}" />
+    <meta property="og:url" content="{{ meta.url }}" />
+    <meta property="og:image" content="{{ meta.image }}" />
+    <meta property="og:description" content="{{ meta.description|addslashes }}" />
+    {% if meta.author_url %}
+        <link rel="me" href="{{ meta.author_url }}" type="text/html">
+    {% endif %}
+    {% if meta.author_name %}
+        <meta property="article:author" content="{{ meta.author_name }}">
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div id="app" class="streams-container">
+        <vue-snotify></vue-snotify>
+        <router-view/>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {% json_context %}
+    {{ block.super }}
+    <script type="text/javascript" charset="utf-8">{% js_reverse_inline %}</script>
+    <script src="{% static 'dist/vue/js/app.js' %}"></script>
+    {% include "streams/includes/_twitter_widget.html" %}
+    {% include "streams/includes/_wordpress_widget.html" %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
