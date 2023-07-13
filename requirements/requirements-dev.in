@@ -1,0 +1,33 @@
+# Include main requirements to avoid conflicts
+-r requirements.txt
+
+codecov
+coverage
+ddt
+django-debug-toolbar
+django-debug-toolbar-user-switcher
+django-querycount
+django-stubs
+django-test-plus
+django_coverage_plugin
+djangorestframework-stubs
+factory_boy
+Faker
+flake8
+freezegun
+# https://github.com/gotcha/ipdb/blob/master/HISTORY.txt#L24
+ipdb<0.13.5
+pip-tools
+pytest
+pytest-blockage
+pytest-cov
+pytest-django
+pytest-env
+pytest-profiling
+pytest-sugar
+Sphinx
+sphinx-autobuild
+Werkzeug
+
+# Recommonmark master has a fix for CommonMark==0.7.3 compatibility which is not released yet
+-e git+https://github.com/rtfd/recommonmark.git@c410abb565a3c4ad4de0ce204ab2fa2db8031cf1#egg=recommonmark==0.4.0
